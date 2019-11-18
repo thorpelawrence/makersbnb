@@ -5,6 +5,10 @@ require 'dotenv/load'
 
 class Database
   def self.connect
-    PG.connect(ENV['DB_URL'])
+    if ENV['RACK_ENV'] == 'test'
+      PG.connect(ENV['DB_URL'])
+    else
+      PG.connect(dbname: 'makersbnb_test')
+    end
   end
 end
