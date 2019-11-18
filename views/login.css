@@ -78,7 +78,7 @@ body {
 
  .submit {
      position: relative;
-     margin-top: 10px
+     margin-top: 10px;
      margin-left: 170px;
     font-family: 'Circular', Roboto, Helvetica Neue, sans-serif;
  }
@@ -92,7 +92,7 @@ body {
     height: 200px;
  }
 
- .signup-box {
+ .login-box {
      justify-content: row;
     text-align: center;
     font-family: 'Circular', Roboto, Helvetica Neue, sans-serif;
@@ -102,7 +102,7 @@ body {
     position: relative;
 
     width: 300px;
-    height: 300px;
+    height: 200px;
     border: 2px solid #000;
     border-radius: 10px;
  }
