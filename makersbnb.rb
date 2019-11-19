@@ -2,6 +2,7 @@
 
 require "sinatra"
 require_relative "lib/user"
+require_relative "lib/property"
 
 class MakersBNB < Sinatra::Base
   enable :sessions
@@ -9,7 +10,7 @@ class MakersBNB < Sinatra::Base
 
   get "/" do
     @username = session[:username]
-    @properties = []
+    @properties = Property.all
     erb(:index)
   end
 
