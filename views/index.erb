@@ -12,8 +12,13 @@
         <a href="../views/index.html" class="logo"></a>
         <h1 class="title">MakersBnB</h1>
         <ul class="login-container">
-            <li class="navbar-item">Sign Up</li>
-            <li class="navbar-item">Login</li>
+            <% if @username.nil? %>
+                <li class="navbar-item"><a href="/signup">Sign Up</a></li>
+                <li class="navbar-item"><a href="/login">Login</a></li>
+            <% else %>
+                <li class="navbar-item"><%= @username %></li>
+                <li class="navbar-item"><a href="/logout">Log Out</a></li>
+            <% end %>
             <li class="hamburger-menu"></li>
         </ul>
     </div>
@@ -21,7 +26,7 @@
         <div class="properties-container">
         <div class="container-item">
             <div class="property-image">
-                <img class="img" src="../images/house.jpg" alt="house image">
+                <img class="img" src="images/house.jpg" alt="house image">
             </div>
             <div class="property-container">
                 <div class="property-info">

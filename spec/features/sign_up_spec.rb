@@ -1,6 +1,7 @@
-describe "FEATURE: Signing up" do
+feature "FEATURE: Signing up" do
   scenario "user can sign up" do
-    expect { sign_up }.to change { User.count }.by(1)
+    sign_up
+    expect(User.get_by_username('test_username')).not_to be_nil
   end
 
   scenario "user cant sign up with existing email or username" do

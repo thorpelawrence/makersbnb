@@ -9,7 +9,6 @@ describe User do
   it "should check if the password is correct" do
     User.create("test_username", "test_password", "test@test.com", "01234567890")
     user = User.get_by_username("test_username")
-    p user
-    expect(user["username"].length).to eq 61
+    expect(User.check_password("test_username", "test_password")).to be(true)
   end
 end

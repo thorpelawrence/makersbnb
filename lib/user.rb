@@ -16,6 +16,7 @@ class User
   def self.check_password(username, password)
     connection = Database.connect
     user = connection.exec_params("SELECT * FROM users WHERE username=$1", [username]).first
-    return BCrypt::Password.new(user["password"]) == password
+    return false if user.nil?
+    return BCrypt::Password.new(user['pass']) == password
   end
 end
