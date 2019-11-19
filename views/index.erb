@@ -29,30 +29,28 @@
             <% @properties.each do |property| %>
                 <div class="container-item">
                     <div class="property-image">
-                        <img class="img" src="<%= property[:image_link] %>" alt="house image">
+                        <img class="img" src="<%= property['image_link'] %>" alt="house image">
                     </div>
                     <div class="property-container">
                         <div class="property-info">
-                            <h3 class="property-title"><%= property[:property_name] %></h3>
+                            <h3 class="property-title"><%= property["property_name"] %></h3>
                             <div class="property-listing">
                                 <ul class="property-list">
-                                    <li>2 guests</li>
-                                    <li>1 bedroom</li>
-                                    <li>2 beds</li>
-                                    <li>1 bathroom</li>
+                                    <li><%= property["area"] %></li>
+                                    <li><%= property["max_people"] %> guests</li>
+                                    <li><%= property["no_beds"] %> beds</li>
                                 </ul>
                                 <ul class="property-list">
-                                    <li>Wifi</li>
-                                    <li>Free parking</li>
-                                    <li>Kitchen</li>
-                                    <li>Heating</li>
+                                    <% if property["wifi"] == 't' %><li>Wifi</li><% end %>
+                                    <% if property["parking"] == 't' %><li>Free parking</li><% end %>
+                                    <% if property["kitchen"] == 't' %><li>Kitchen</li><% end %>
+                                    <% if property["heating"] == 't' %><li>Heating</li><% end %>
                                 </ul>
                             </div>
                         </div>
                     </div>
                     <div class="property-price">
-                        <h2 class="price-title">£40<span> /night</span></h2>
-                        <h3 class="price-breakdown">£20 per person</h3>
+                        <h2 class="price-title">£<%= property["price"][1..] %><span> /night</span></h2>
                     </div>
                     <div class="button-container">
                         <button class="property-button">Check Available Dates</button>
