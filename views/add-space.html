@@ -19,7 +19,6 @@
 
     <div class="container">
         <h2 class="header">List your space</h2>
-
         <form action="">
             <div class="list-space">
                 <div class="section-one">
@@ -80,10 +79,29 @@
                 </div>
             </div>
             <div class="amenities-checkbox">
-                <input type="checkbox" name="wifi" id="wifi">
-                <input type="checkbox" name="kitchen" id="kitchen">
-                <input type="checkbox" name="heating" id="heating">
-                <input type="checkbox" name="parking" id="parking">
+                <div class="form-row">
+                    <label for="wifi">Wifi</label>
+                    <input class="checkbox" type="checkbox" name="wifi" id="wifi">
+                </div>
+
+                <div class="form-row">
+                    <label for="kitchen">Kitchen</label>
+                    <input class="checkbox" type="checkbox" name="kitchen" id="kitchen">
+                </div>
+
+                <div class="form-row">    
+                    <label for="heating">Heating</label>
+                    <input class="checkbox" type="checkbox" name="heating" id="heating">
+                </div>
+                <div class="form-row">
+                    <label for="parking">Parking</label>
+                    <input class="checkbox" type="checkbox" name="parking" id="parking">
+                </div>
+            </div>
+            <div class="button-container">
+                <button class="submit-button" type="submit" name="continue">
+                    Continue
+                </button>
             </div>
         </form>
     </div>
