@@ -275,6 +275,15 @@ body {
     padding-left: 60px;
 }
 
+#property-img {
+    background-image: url(../../images/image-icon.png);
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: 10px 6px;
+    padding-left: 60px;
+    width: 100%;
+}
+
 .amenities-checkbox {
     display: flex;
     flex-direction: row;
@@ -302,4 +311,9 @@ body {
 
 .submit-button:hover {
     background-color: #1D8B4B;
+}
+
+.property-image-container {
+    width: 70%;
+    margin: 0px auto;
 }
