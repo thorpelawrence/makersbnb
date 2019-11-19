@@ -9,6 +9,7 @@ class MakersBNB < Sinatra::Base
 
   get "/" do
     @username = session[:username]
+    @properties = []
     erb(:index)
   end
 
