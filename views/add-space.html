@@ -19,36 +19,73 @@
 
     <div class="container">
         <h2 class="header">List your space</h2>
+
+        <form action="">
+            <div class="list-space">
+                <div class="section-one">
+                    <div class="form-row">
+                        <label for="property-name">Property name</label>
+                        <input id="property-name" name="property-name" type="number">
+                    </div>
+
+                    <div class="form-row">
+                        <label for="home-type">Home Type</label>
+                        <select name="home-type" id="home-type">
+                            <option value="Appartment">Appartment</option>
+                            <option value="House">House</option>
+                            <option value="Bed & Breakfast">Bed & Breakfast</option>
+                        </select>
+                    </div>
+            
+                    <div class="form-row">
+                        <label for="room-type">Room Type</label>
+                        <select name="room-type" id="room-type">
+                            <option value="Entire home/appartment">Entire home/appartment</option>
+                            <option value="Private room">Private room</option>
+                            <option value="Shared room">Shared room</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-row">
+                        <label for="accomodates">Accomodates</label>
+                        <input id="accomodates" name="accomodates" type="number">
+                    </div>
+            
+                    <div class="form-row">
+                        <label for="location">Location</label>
+                        <input id="location" name="location" type="text">
+                    </div>
+                </div>
+
+                <div class="section-two">
+                    <div class="form-row">
+                        <label for="beds">Number of beds</label>
+                        <input id="beds" name="beds" type="number">
+                    </div>
+                    
+                    <div class="form-row">
+                        <label for="price">Price per night</label>
+                        <input id="price" name="price" type="number">
+                    </div>
+                
+                    <h3 class="dates-title">Dates Available</h3>
+                    <div class="form-row">
+                        <label for="date-from">From</label>
+                        <input name="date-from" type="date">
+                    </div>
+                    <div class="form-row">
+                        <label for="date-to">To</label>
+                        <input name="date-to" type="date">
+                    </div>
+                </div>
+            </div>
+            <div class="amenities-checkbox">
+                <input type="checkbox" name="wifi" id="wifi">
+                <input type="checkbox" name="kitchen" id="kitchen">
+                <input type="checkbox" name="heating" id="heating">
+                <input type="checkbox" name="parking" id="parking">
+            </div>
+        </form>
     </div>
-
-    <form action="" class="list-space">
-        <div class="form-row">
-            <label for="home-type">Home Type</label>
-            <select name="home-type" id="home-type">
-                <option value="Appartment"></option>
-                <option value="House"></option>
-                <option value="Bed & Breakfast"></option>
-            </select>
-        </div>
-
-        <div class="form-row">
-            <label for="room-type">Room Type</label>
-            <select name="room-type" id="room-type">
-                <option value="Entire home/appartment"></option>
-                <option value="Private room"></option>
-                <option value="Shared room"></option>
-            </select>
-        </div>
-
-        <div class="form-row">
-            <label for="location"></label>
-            <input type="text">
-        </div>
-
-        <div class="form-row">
-            <label for=""></label>
-            <input type="text">
-        </div>
-    </form>
 </body>
 </html>

@@ -234,3 +234,35 @@ body {
     margin-top: 56px;
     margin-left: 170px;
 }
+
+#accomodates {
+    background-image: url(../../images/people-icon.png);
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: 10px 8px;
+    padding-left: 60px;
+}
+
+#location {
+    background-image: url(../../images/location-icon.png);
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: 10px 6px;
+    padding-left: 60px;
+}
+
+#price {
+    background-image: url(../../images/pound-icon.png);
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: 10px 6px;
+    padding-left: 60px;
+}
+
+#beds {
+    background-image: url(../../images/bed-icon.png);
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: 10px 6px;
+    padding-left: 60px;
+}
