@@ -13,5 +13,6 @@ CREATE TABLE listings
     wifi BIT DEFAULT 0,
     parking BIT DEFAULT 0,
     kitchen BIT DEFAULT 0,
-    heating BIT DEFAULT 0
+    heating BIT DEFAULT 0,
+    image_link VARCHAR
 );
