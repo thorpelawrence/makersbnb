@@ -104,6 +104,58 @@ body {
     height: 100%;
 }
 
+.labels{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 17px;
+    color: white;
+    margin: 10px 0 10px 20px;
+    width: 250px;
+    height: 30px;
+ }
+
+ .submit {
+    position: relative;
+    margin-top: 10px;
+    margin: 10px auto;
+}
+
+.data-capture {
+    position: absolute;
+    width: 300px;
+ }
+
+.login-box, .signup-box {
+    text-align: center;
+    color: white;
+    margin: 100px auto;
+    background-color: #212121;
+    position: relative;
+    width: 300px;
+    border: 2px solid #000;
+    border-radius: 10px;
+}
+
+.login-box {
+    height: 250px;
+}
+
+.signup-box {
+    height: 300px;
+}
+
+.submit {
+    height: 30px;
+    width: 170px;
+    background-color: #27AE60;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 100px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
 .container-item {
     display: flex;
     flex-direction: row;
