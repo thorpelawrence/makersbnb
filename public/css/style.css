@@ -74,6 +74,11 @@ body {
     border-bottom: 4px solid #f1f1f1;
 }
 
+.navbar-item a {
+    color: #f1f1f1;
+    text-decoration: none;
+}
+
 .container {
     position: absolute;
     width: 100%;
