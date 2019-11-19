@@ -1,5 +1,6 @@
 CREATE TABLE listings
 (
+
     id SERIAL PRIMARY KEY,
     area VARCHAR(60),
     property_name VARCHAR(60) ,
@@ -14,5 +15,6 @@ CREATE TABLE listings
     parking BOOLEAN DEFAULT FALSE,
     kitchen BOOLEAN DEFAULT FALSE,
     heating BOOLEAN DEFAULT FALSE,
+
     image_link VARCHAR
 );
