@@ -16,6 +16,14 @@ body {
     z-index: 100;
 }
 
+.logo {
+    background-image: url(../../images/makersbnb-logo.png);
+    height: 100px;
+    width: 200px;
+    background-repeat: no-repeat;
+    margin: 3px 40px;
+}
+
 .title {
     position: relative;
     font-weight: 400;
@@ -276,7 +284,7 @@ body {
     margin: 20px auto;
 }
 
-.button-container {
+.submit-button-container {
     width: 200px;
     height: 100px;
     margin: 20px auto;
