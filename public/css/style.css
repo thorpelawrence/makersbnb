@@ -266,6 +266,9 @@ html {
     border: 1px solid #212121;
     border-radius: 30px;
     cursor: pointer;
+    text-decoration: none;
+    color: #212121;
+    padding: 7px;
 }
 
 .property-button:hover {

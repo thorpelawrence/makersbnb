@@ -8,30 +8,35 @@
     <title>Add a property</title>
 </head>
 <body>
-    <div class="navbar">
-        <a href="../views/index.html" class="logo"></a>
-        <h1 class="title">MakersBnB</h1>
-        <ul class="login-container">
-            <li class="navbar-item">Sign Up</li>
-            <li class="navbar-item">Login</li>
-            <li class="hamburger-menu"></li>
-        </ul>
-    </div>
+<div class="navbar">
+<a href="/" class="logo"></a>
+<h1 class="title">MakersBnB</h1>
+<ul class="login-container">
+    <% if @username.nil? %>
+    <li class="navbar-item"><a href="/signup">Sign Up</a></li>
+    <li class="navbar-item"><a href="/login">Login</a></li>
+    <% else %>
+    <li class="navbar-item"><%= @username %></li>
+    <li class="navbar-item"><a href="/logout">Log Out</a></li>
+    <% end %>
+    <li class="hamburger-menu"></li>
+</ul>
+</div>
 
     <div class="container">
         <h2 class="header">List your space</h2>
-        <form action="">
+        <form action="/add-space" method="post">
             <div class="sections">
                 <div class="section-one">
                     <div class="form-row">
                         <label for="property-name">Property name</label>
-                        <input id="property-name" name="property-name" type="number">
+                        <input id="property-name" name="property-name" type="text">
                     </div>
 
                     <div class="form-row">
                         <label for="home-type">Home Type</label>
                         <select name="home-type" id="home-type">
-                            <option value="Appartment">Appartment</option>
+                            <option value="Appartment">Apartment</option>
                             <option value="House">House</option>
                             <option value="Bed & Breakfast">Bed & Breakfast</option>
                         </select>
@@ -40,7 +45,7 @@
                     <div class="form-row">
                         <label for="room-type">Room Type</label>
                         <select name="room-type" id="room-type">
-                            <option value="Entire home/appartment">Entire home/appartment</option>
+                            <option value="Entire home/apartment">Entire home/apartment</option>
                             <option value="Private room">Private room</option>
                             <option value="Shared room">Shared room</option>
                         </select>
