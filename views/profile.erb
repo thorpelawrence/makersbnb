@@ -28,7 +28,7 @@
         <div>
             <h2 class="header">Hi <%= @username %>!</h2>
             <h4>Your properties</h4>
-            <a href="/add-property" class="property-button">Add new property</a>
+            <a href="/add-space" class="property-button">Add new property</a>
             <ul>
             <% @properties.each do |property| %>
                 <li><%= property["property_name"] %></li>
