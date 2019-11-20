@@ -2,7 +2,8 @@ require_relative "../database"
 # require_relative "lib/user"
 
 class Property
-  def self.create(home_type, area, room_type, max_people, price,
+
+    def self.create(home_type, area, room_type, max_people, price,
                   date_from, date_to, property_name, no_beds, wifi, parking, kitchen, heating, image_link, username)
     connection = Database.connect
     connection.exec_params("INSERT INTO listings (home_type, area, room_type, max_people, price,
@@ -11,8 +12,14 @@ class Property
                                                                                      date_from, date_to, property_name, no_beds, wifi, parking, kitchen, heating, image_link, username])
   end
 
-  def self.all
-    connection = Database.connect
-    connection.exec("SELECT * FROM listings").to_a
-  end
+    def self.all
+        connection = Database.connect
+        connection.exec("SELECT * FROM listings").to_a
+    end
+
+    def self.all_for_username(username)
+        connection = Database.connect
+        connection.exec_params("SELECT * FROM listings WHERE username=$1", [username])
+    end
+
 end
