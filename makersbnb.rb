@@ -60,4 +60,12 @@ class MakersBNB < Sinatra::Base
   get "/add-space" do
     erb(:'add-space')
   end
+
+  post "/add-space" do
+    Property.create(params[:"home-type"], params[:location], params[:"room-type"], params[:accomodates], params[:price],
+                    params[:"date-from"], params[:"date-to"], params[:"property-name"], params[:beds], params[:wifi], params[:parking],
+                    params[:kitchen], params[:heating], params[:"property-img"], params[:username])
+    session[:username] = params[:username]
+    redirect "/profile"
+  end
 end
