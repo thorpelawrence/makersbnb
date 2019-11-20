@@ -49,4 +49,8 @@ class MakersBNB < Sinatra::Base
   get "/add-space" do
     erb(:'add-space')
   end
+
+  get "/bookings-page" do
+    erb(:'bookings-page')
+  end
 end
