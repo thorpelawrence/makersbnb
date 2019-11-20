@@ -16,3 +16,7 @@ gem "pg", "~> 1.1"
 gem "dotenv", "~> 2.7"
 
 gem "bcrypt", "~> 3.1"
+
+gem "simplecov", "~> 0.17.1"
+gem "simplecov-console", "~> 0.6.0"
+gem "simplecov-lcov", "~> 0.7.0"
