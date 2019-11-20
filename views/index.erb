@@ -18,7 +18,7 @@
             <li class="navbar-item"><a href="/signup">Sign Up</a></li>
             <li class="navbar-item"><a href="/login">Login</a></li>
             <% else %>
-            <li class="navbar-item"><%= @username %></li>
+            <li class="navbar-item"><a href="/profile"><%= @username %></a></li>
             <li class="navbar-item"><a href="/logout">Log Out</a></li>
             <% end %>
             <li class="hamburger-menu"></li>

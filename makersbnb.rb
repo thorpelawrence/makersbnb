@@ -48,6 +48,15 @@ class MakersBNB < Sinatra::Base
     redirect "/"
   end
 
+  get "/profile" do
+    @username = session[:username]
+    if @username.nil?
+      return redirect "/login"
+    end
+    @properties = Property.all_for_username(@username)
+    erb(:profile)
+  end
+
   get "/add-space" do
     erb(:'add-space')
   end
