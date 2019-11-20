@@ -12,7 +12,7 @@
 <body>
     <div class="navbar">
         <a href="/" class="logo"></a>
-        <h1 class="title">Profile - MakersBnB</h1>
+        <h1 class="title">MakersBnB</h1>
         <ul class="login-container">
             <% if @username.nil? %>
             <li class="navbar-item"><a href="/signup">Sign Up</a></li>
@@ -26,15 +26,43 @@
     </div>
     <div class="container">
         <div>
-            <h2 class="header">Hi <%= @username %>!</h2>
-            <h4>Your properties</h4>
-            <ul>
-            <% @properties.each do |property| %>
-                <li><%= property["property_name"] %></li>
-            <% end %>
-            </ul>
+            <h2 class="header">Hi <%= @username %>! Welcome to your profile!</h2>
+            <h4 class="header"><u>YOUR PROPERTIES</u></h4>
         </div>
-        <div class="push"></div>
+        <div class="properties-container">
+            <% @properties.each do |property| %>
+            <div class="container-item">
+                <div class="property-image">
+                    <img class="img" src="<%= property['image_link'] %>" alt="house image">
+                </div>
+                <div class="property-container">
+                    <div class="property-info">
+                        <h3 class="property-title"><%= property["property_name"] %></h3>
+                        <div class="property-listing">
+                            <ul class="property-list">
+                                <li><%= property["area"] %></li>
+                                <li><%= property["max_people"] %> guests</li>
+                                <li><%= property["no_beds"] %> beds</li>
+                            </ul>
+                            <ul class="property-list">
+                                <% if property["wifi"] == 't' %><li>Wifi</li><% end %>
+                                <% if property["parking"] == 't' %><li>Free parking</li><% end %>
+                                <% if property["kitchen"] == 't' %><li>Kitchen</li><% end %>
+                                <% if property["heating"] == 't' %><li>Heating</li><% end %>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="property-price">
+                    <h2 class="price-title">£<%= property["price"][1..] %><span> /night</span></h2>
+                </div>
+                <div class="property-date">
+                    <h3>Availability</h3>
+                    <h4 class="date-title"><%= property["date_from"] %> to <%= property["date_to"] %></h4>
+                </div>
+            </div>
+            <% end %>
+        </div>
         <footer class="footer">
             <ul class="footer-list">
                 <li class="footer-list-item">
