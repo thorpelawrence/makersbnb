@@ -411,17 +411,58 @@ html {
 
 .section-one h4 {
     font-weight: 400;
+    margin-bottom: 0px;
 }
 
-.property-details-items {
-    list-style: none;
-    display: grid;
+.property-details {
     width: 100%;
-    height: 100px;
-    padding-left: 0;
 }
 
-.property-details-items li {
+.property-details-list {
+    list-style: none;
     padding-left: 0;
-    margin-left: 20px;
+    margin-top: 5px;
+}
+
+.property-details-list li {
+    margin-top: 25px;
+}
+
+.break {
+    height: 1px;
+    width: 82%;
+    background-color: #2E2E2E;
+    margin: 20px 0;
+}
+
+.property-description {
+    width: 85%;
+}
+
+.booking-container {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #2E2E2E;
+}
+
+.booking-container .break{
+    margin: 0px auto;
+}
+
+.headings {
+    height: 100px;
+    width: 80%;
+    margin: 20px auto;
+}
+
+.book-dates {
+    width: 80%;
+    height: 100px;
+    margin: 20px auto;
+}
+
+.guests-select {
+    margin: 20px auto;
+    height: 40px;
+    width: 100px;
 }
