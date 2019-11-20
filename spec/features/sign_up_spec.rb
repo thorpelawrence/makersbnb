@@ -11,7 +11,7 @@ feature "FEATURE: Signing up" do
   end
 
   scenario "user cant sign up with non-matching passwords" do
-    sign_up
-    expect { incorrect_sign_up }.not_to change { User.count }
+    sign_up(confirmpassword: 'not matching')
+    expect(page).to have_content("Passwords do not match")
   end
 end
