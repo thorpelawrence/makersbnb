@@ -18,6 +18,6 @@ feature "FEATURE: Adding new property" do
     fill_in 'heating', :with => 'TRUE'
     fill_in 'image_link', :with => 'NULL'
     find('input[type="submit"]').click
-    expect(page).to contain("Bramleys End")
+    expect(page).to have_content "Bramleys End"
   end
 end
