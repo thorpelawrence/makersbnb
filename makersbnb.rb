@@ -58,14 +58,21 @@ class MakersBNB < Sinatra::Base
   end
 
   get "/add-space" do
+    @username = session[:username]
+    if @username.nil?
+      return redirect "/login"
+    end
     erb(:'add-space')
   end
 
   post "/add-space" do
+    @username = session[:username]
+    if @username.nil?
+      return redirect "/login"
+    end
     Property.create(params[:"home-type"], params[:location], params[:"room-type"], params[:accomodates], params[:price],
                     params[:"date-from"], params[:"date-to"], params[:"property-name"], params[:beds], params[:wifi], params[:parking],
-                    params[:kitchen], params[:heating], params[:"property-img"], params[:username])
-    session[:username] = params[:username]
+                    params[:kitchen], params[:heating], params[:"property-img"], session[:username])
     redirect "/profile"
   end
 end

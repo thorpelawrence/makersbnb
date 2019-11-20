@@ -8,15 +8,20 @@
     <title>Add a property</title>
 </head>
 <body>
-    <div class="navbar">
-        <a href="/" class="logo"></a>
-        <h1 class="title">MakersBnB</h1>
-        <ul class="login-container">
-            <li class="navbar-item">Sign Up</li>
-            <li class="navbar-item">Login</li>
-            <li class="hamburger-menu"></li>
-        </ul>
-    </div>
+<div class="navbar">
+<a href="/" class="logo"></a>
+<h1 class="title">MakersBnB</h1>
+<ul class="login-container">
+    <% if @username.nil? %>
+    <li class="navbar-item"><a href="/signup">Sign Up</a></li>
+    <li class="navbar-item"><a href="/login">Login</a></li>
+    <% else %>
+    <li class="navbar-item"><%= @username %></li>
+    <li class="navbar-item"><a href="/logout">Log Out</a></li>
+    <% end %>
+    <li class="hamburger-menu"></li>
+</ul>
+</div>
 
     <div class="container">
         <h2 class="header">List your space</h2>
