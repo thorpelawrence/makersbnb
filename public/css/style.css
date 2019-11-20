@@ -252,7 +252,6 @@ html {
 .date-title {
     font-weight: 400;
     margin: 60px 0 5px 0;
-    width: 100px;
 }
 
 .price-breakdown {
@@ -275,6 +274,16 @@ html {
     text-decoration: none;
     color: #212121;
     padding: 7px;
+    margin: 0px auto;
+}
+
+.heading-container {
+    text-align: center;
+}
+
+.property-button a:visited{
+    text-decoration: none!important;
+    color: #212121!important;
 }
 
 .property-button:hover {
