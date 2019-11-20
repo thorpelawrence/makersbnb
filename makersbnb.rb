@@ -65,6 +65,14 @@ class MakersBNB < Sinatra::Base
     erb(:'add-space')
   end
 
+  get "/bookings-page" do
+    @username = session[:username]
+    if @username.nil?
+      return redirect "/login"
+    end
+    erb(:'bookings-page')
+  end
+
   post "/add-space" do
     @username = session[:username]
     if @username.nil?
