@@ -113,7 +113,6 @@ html {
     width: 100%;
     height: 100%;
     padding: 100px 0 10px 0;
-    border-radius: 5px;
     margin: 0 auto;
 }
 
@@ -273,6 +272,9 @@ html {
     border: 1px solid #212121;
     border-radius: 30px;
     cursor: pointer;
+    text-decoration: none;
+    color: #212121;
+    padding: 7px;
 }
 
 .property-button:hover {
@@ -287,7 +289,7 @@ html {
     font-size: 28px;
 }
 
-.list-space {
+.sections {
     display: flex;
     flex-direction: row;
     position: relative;
@@ -401,4 +403,80 @@ html {
 .property-image-container {
     width: 70%;
     margin: 0px auto;
+}
+
+.booking-image-container {
+    height: 300px;
+    width: 450px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.booking-image {
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.section-one h4 {
+    font-weight: 400;
+    margin-bottom: 0px;
+}
+
+.property-details {
+    width: 100%;
+}
+
+.property-details-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 5px;
+}
+
+.property-details-list li {
+    margin-top: 25px;
+}
+
+.break {
+    height: 1px;
+    width: 82%;
+    background-color: #2E2E2E;
+    margin: 20px 0;
+}
+
+.property-description {
+    width: 85%;
+}
+
+.booking-container {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #2E2E2E;
+}
+
+.booking-container .break{
+    margin: 0px auto;
+}
+
+.headings {
+    height: 100px;
+    width: 80%;
+    margin: 20px auto;
+}
+
+.book-dates {
+    width: 80%;
+    height: 100px;
+    margin: 20px auto;
+}
+
+.guests-select {
+    margin: 0px 60px 40px;
+    height: 40px;
+    width: 80%;
+}
+
+.booking-button-container {
+    width: 200px;
+    margin: 10px auto;
 }

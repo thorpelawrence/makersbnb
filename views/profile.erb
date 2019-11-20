@@ -28,6 +28,7 @@
         <div>
             <h2 class="header">Hi <%= @username %>! Welcome to your profile!</h2>
             <h4 class="header"><u>YOUR PROPERTIES</u></h4>
+            <a href="/add-space" class="property-button">Add new property</a>
         </div>
         <div class="properties-container">
             <% @properties.each do |property| %>

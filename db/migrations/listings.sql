@@ -1,6 +1,5 @@
 CREATE TABLE listings
 (
-
     id SERIAL PRIMARY KEY,
     area VARCHAR(60),
     property_name VARCHAR(60) ,
