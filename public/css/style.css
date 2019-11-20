@@ -113,7 +113,6 @@ html {
     width: 100%;
     height: 100%;
     padding: 100px 0 10px 0;
-    border-radius: 5px;
     margin: 0 auto;
 }
 
@@ -281,7 +280,7 @@ html {
     font-size: 28px;
 }
 
-.list-space {
+.sections {
     display: flex;
     flex-direction: row;
     position: relative;
@@ -395,4 +394,34 @@ html {
 .property-image-container {
     width: 70%;
     margin: 0px auto;
+}
+
+.booking-image-container {
+    height: 300px;
+    width: 450px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.booking-image {
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.section-one h4 {
+    font-weight: 400;
+}
+
+.property-details-items {
+    list-style: none;
+    display: grid;
+    width: 100%;
+    height: 100px;
+    padding-left: 0;
+}
+
+.property-details-items li {
+    padding-left: 0;
+    margin-left: 20px;
 }
