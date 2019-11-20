@@ -462,7 +462,12 @@ html {
 }
 
 .guests-select {
-    margin: 20px auto;
+    margin: 0px 60px 40px;
     height: 40px;
-    width: 100px;
+    width: 80%;
+}
+
+.booking-button-container {
+    width: 200px;
+    margin: 10px auto;
 }
