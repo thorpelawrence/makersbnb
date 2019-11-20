@@ -15,15 +15,15 @@ A practice group project based on Air BnB
 
 ## User Stories
 
-- [ ] As a user,
+- [x] As a user,
       I want to be able to sign up for MakersBnB,
       so that I can access the services of the site
 
-- [ ] As a user,
+- [x] As a user,
       I want to be able to log into MakersBnB,
       so that I can access my profile.
 
-- [ ] As a user,
+- [x] As a user,
       I want to be able to logout from MakersBnB,
       so I can protect the security of my account.
 
@@ -31,7 +31,7 @@ A practice group project based on Air BnB
       I want to be able to list a new space,
       so that I can rent it to others.
 
-- [ ] As a user,
+- [x] As a user,
       I want to be able to see available places,
       so that I can choose one to rent.
 
