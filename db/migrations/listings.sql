@@ -14,5 +14,7 @@ CREATE TABLE listings
     parking BOOLEAN DEFAULT FALSE,
     kitchen BOOLEAN DEFAULT FALSE,
     heating BOOLEAN DEFAULT FALSE,
+    username VARCHAR,
+    FOREIGN KEY (username) REFERENCES users(username),
     image_link VARCHAR
 );

@@ -37,13 +37,24 @@ class MakersBNB < Sinatra::Base
 
   post "/sign-up" do
     username = params[:username]
-    user = User.get_by_username(username)
 
+    user = User.get_by_username(username)
     return "Username is already taken. Email is already taken." unless user.nil?
+
+    return "Passwords do not match" unless params[:password] == params[:'confirm-password']
 
     User.create(params[:username], params[:password], params[:email], params[:phone])
     session[:username] = params[:username]
     redirect "/"
+  end
+
+  get "/profile" do
+    @username = session[:username]
+    if @username.nil?
+      return redirect "/login"
+    end
+    @properties = Property.all_for_username(@username)
+    erb(:profile)
   end
 
   get "/add-space" do
@@ -51,5 +62,10 @@ class MakersBNB < Sinatra::Base
   end
 
   post "/add-space" do
+    Property.create(params[:"home-type"], params[:location], params[:"room-type"], params[:accomodates], params[:price],
+                    params[:"date-from"], params[:"date-to"], params[:"property-name"], params[:beds], params[:wifi], params[:parking],
+                    params[:kitchen], params[:heating], params[:"property-img"], params[:username])
+    session[:username] = params[:username]
+    redirect "/profile"
   end
 end
