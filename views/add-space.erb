@@ -20,18 +20,18 @@
 
     <div class="container">
         <h2 class="header">List your space</h2>
-        <form action="">
+        <form action="/add-space" method="post">
             <div class="list-space">
                 <div class="section-one">
                     <div class="form-row">
                         <label for="property-name">Property name</label>
-                        <input id="property-name" name="property-name" type="number">
+                        <input id="property-name" name="property-name" type="text">
                     </div>
 
                     <div class="form-row">
                         <label for="home-type">Home Type</label>
                         <select name="home-type" id="home-type">
-                            <option value="Appartment">Appartment</option>
+                            <option value="Appartment">Apartment</option>
                             <option value="House">House</option>
                             <option value="Bed & Breakfast">Bed & Breakfast</option>
                         </select>
@@ -40,7 +40,7 @@
                     <div class="form-row">
                         <label for="room-type">Room Type</label>
                         <select name="room-type" id="room-type">
-                            <option value="Entire home/appartment">Entire home/appartment</option>
+                            <option value="Entire home/apartment">Entire home/apartment</option>
                             <option value="Private room">Private room</option>
                             <option value="Shared room">Shared room</option>
                         </select>
