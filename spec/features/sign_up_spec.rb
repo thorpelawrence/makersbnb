@@ -1,3 +1,5 @@
+require_relative "../login_helper"
+
 feature "FEATURE: Signing up" do
   scenario "user can sign up" do
     sign_up

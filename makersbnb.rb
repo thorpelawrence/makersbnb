@@ -47,4 +47,7 @@ class MakersBNB < Sinatra::Base
   get "/add-space" do
     erb(:'add-space')
   end
+
+  post "/add-space" do
+  end
 end
