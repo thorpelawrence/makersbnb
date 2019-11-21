@@ -67,6 +67,9 @@ class MakersBNB < Sinatra::Base
 
   get "/bookings-page" do
     @username = session[:username]
+    property_id = params[:property]
+    @property = Property.get_by_id(property_id)
+    redirect "/" if @property.nil?
     if @username.nil?
       return redirect "/login"
     end
