@@ -131,19 +131,23 @@ html {
     font-size: 17px;
     color: white;
     margin: 10px 0 10px 20px;
-    width: 250px;
+    width: 350px;
     height: 30px;
+ }
+
+ .labels input {
+     width: 150px;
  }
 
  .submit {
     position: relative;
-    margin-top: 10px;
-    margin: 10px auto;
+    margin: 20px auto;
 }
 
 .data-capture {
     position: absolute;
-    width: 300px;
+    margin: 0px auto;
+    width: 400px;
  }
 
 .login-box, .signup-box {
@@ -152,17 +156,18 @@ html {
     margin: 100px auto;
     background-color: #212121;
     position: relative;
-    width: 300px;
     border: 2px solid #000;
     border-radius: 10px;
 }
 
 .login-box {
     height: 250px;
+    width: 400px;
 }
 
 .signup-box {
-    height: 300px;
+    height: 370px;
+    width: 400px;
 }
 
 .submit {
