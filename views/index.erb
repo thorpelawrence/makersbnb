@@ -53,7 +53,7 @@
                         <h2 class="price-title">£<%= property["price"][1..] %><span> /night</span></h2>
                     </div>
                     <div class="button-container">
-                        <button class="property-button">Check Available Dates</button>
+                        <a class="property-button" href="/bookings-page?property=<%= property['id'] %>">Check Available Dates</a>
                     </div>
                 </div>
             <% end %>
