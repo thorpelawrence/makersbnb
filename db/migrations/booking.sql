@@ -4,5 +4,6 @@ CREATE TABLE booking (
   date_from DATE NOT NULL,
   date_to DATE NOT NULL,
   FOREIGN KEY (listing_id) REFERENCES listings(id),
-  FOREIGN KEY (guest_username) REFERENCES users(username)
+  FOREIGN KEY (guest_username) REFERENCES users(username),
+  approved BOOLEAN DEFAULT FALSE
 );
