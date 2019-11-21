@@ -25,6 +25,18 @@
         </ul>
     </div>
     <div class="container">
+    <div class="approvals-container">
+    <% @bookings.each do |booking| %>
+    <div class="container-item">
+        <div class="property-container">
+            <div class="property-info">
+                <h3 class="property-title"><%= booking["date_from"] %></h3>
+                <h3 class="property-title"><%= booking["date_to"] %></h3>
+            </div>
+        </div>
+    </div>
+    <% end %>
+</div>
         <div class="heading-container">
             <h2 class="header">Hi <%= @username %>! Welcome to your profile!</h2>
             <h4 class="header"><u>YOUR PROPERTIES</u></h4>
