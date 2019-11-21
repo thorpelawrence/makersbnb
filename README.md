@@ -51,5 +51,27 @@ A practice group project based on Air BnB
 
 ## Folder structure, models and libraries
 
+root
+|
+|----coverage
+|     
+|----controllers
+|
+|----public
+|      |--css
+|      |--images
+|
+|----spec
+|      |--features
+|
+|----db
+      |-migrations
+|
+|
+|----lib
+|
+|----views
+```
+
 
 ## How to use
