@@ -3,6 +3,7 @@
 require "sinatra"
 require_relative "lib/user"
 require_relative "lib/property"
+require_relative "lib/booking"
 
 class MakersBNB < Sinatra::Base
   enable :sessions
@@ -54,6 +55,7 @@ class MakersBNB < Sinatra::Base
       return redirect "/login"
     end
     @properties = Property.all_for_username(@username)
+    @user_bookings = Booking.get_booking_by_guest_username(@username)
     erb(:profile)
   end
 
@@ -85,5 +87,10 @@ class MakersBNB < Sinatra::Base
                     params[:"date-from"], params[:"date-to"], params[:"property-name"], params[:beds], params[:wifi], params[:parking],
                     params[:kitchen], params[:heating], params[:"property-img"], session[:username])
     redirect "/profile"
+  end
+
+  post "/book-space" do
+    Booking.create(params[:'property-id'], session[:username], params[:'trip-start'], params[:'trip-end'])
+    redirect "/"
   end
 end

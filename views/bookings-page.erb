@@ -49,7 +49,8 @@
                     <p><%= @property["room_type"] %></p>
                 </div>
             </div>
-            <div class="section-two">
+            <form class="section-two" method="post" action="/book-space">
+                <input type="hidden" value="<%= @property["id"] %>" name="property-id">
                 <div class="booking-container">
                     <div class="headings">
                         <h2>£<%= @property["price"][1..] %> /night</h2>
@@ -68,10 +69,10 @@
                         <option value="two">2 guests</option>
                     </select>
                     <div class="booking-button-container">
-                        <button class="submit-button">Book now</button>
+                        <button type="submit" class="submit-button">Book now</button>
                     </div>
                 </div>
-            </div>
+            </form>
         </div>
     </div>
 </body>

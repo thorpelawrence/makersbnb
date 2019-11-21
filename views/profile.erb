@@ -29,6 +29,12 @@
             <h2 class="header">Hi <%= @username %>! Welcome to your profile!</h2>
             <h4 class="header"><u>YOUR PROPERTIES</u></h4>
             <a href="/add-space" class="property-button">Add new property</a>
+            <h4 class="header">Your Bookings</h4>
+            <ul class="property-list">
+                <% @user_bookings.each do |booking| %>
+                    <li><%= booking['date_from'] %> to <%= booking['date_to'] %> - <% if booking['approved'] != 't' %>not yet <% end %>approved</li>
+                <% end %>
+            </ul>
         </div>
         <div class="properties-container">
             <% @properties.each do |property| %>
