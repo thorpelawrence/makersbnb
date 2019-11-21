@@ -27,7 +27,7 @@ A practice group project based on Air BnB
       I want to be able to logout from MakersBnB,
       so I can protect the security of my account.
 
-- [ ] As a user,
+- [x] As a user,
       I want to be able to list a new space,
       so that I can rent it to others.
 
@@ -35,7 +35,7 @@ A practice group project based on Air BnB
       I want to be able to see available places,
       so that I can choose one to rent.
 
-- [ ] As a user,
+- [x] As a user,
       I want to be able to request to hire a place,
       so that I can stay there.
 
@@ -47,6 +47,7 @@ A practice group project based on Air BnB
 - $ git clone https://github.com/thorpelawrence/makersbnb.git
 - $ bundle install
 - $ create:db makersbnb_test
+- $ setup .ENV file (link in slack)
 
 ## Folder structure, models and libraries
 
