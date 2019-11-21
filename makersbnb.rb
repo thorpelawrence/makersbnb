@@ -91,6 +91,6 @@ class MakersBNB < Sinatra::Base
 
   post "/book-space" do
     Booking.create(params[:'property-id'], session[:username], params[:'trip-start'], params[:'trip-end'])
-    redirect "/"
+    redirect "/profile"
   end
 end
