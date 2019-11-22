@@ -51,5 +51,35 @@ A practice group project based on Air BnB
 
 ## Folder structure, models and libraries
 
+root
+|
+|----coverage
+|     
+|----controllers
+|
+|----public
+|      |--css
+|      |--images
+|
+|----spec
+|      |--features
+|
+|----db
+      |-migrations
+|
+|
+|----lib
+|
+|----views
+```
+
 
 ## How to use
+
+**Visit the homepage and click the sign up button**
+
+![alt tag](public/screenshots/home_page.png)
+
+**Once you signed up, choose the property you want to book and click Check Available Dates button**
+
+![alt tag](public/screenshots/book_property_page.png)
