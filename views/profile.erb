@@ -29,9 +29,7 @@
             <h2 class="header">Hi <%= @username %>! Welcome to your profile!</h2>
             <a href="/add-space" class="property-button">Add new property</a>
             
-            <div class="approvals-container">
-                <%# <h4 class="header">Awaiting Approval</h4> %>
-                
+            <div class="approvals-container">                
                 <div class="approvals-item">
                     <div class="approvals-info">
                         <h3>Awaiting approval </h3>
@@ -48,21 +46,22 @@
                     </div>
                 </div>
 
-                <%# <h4 class="header">Your Bookings</h4> %>
                 <div class="approvals-item">
-                    <h3>Your bookings</h3>
-                    <ul class="approval-dates">
+                    <div class="approvals-info">
+                        <h3>Your bookings</h3>
                         <% @user_bookings.each do |booking| %>
-                        <h3 class="property-title">Property: <%= booking["property_name"] %></h3>
-                        <h3 class="property-title">From: <%= booking["date_from"] %></h3>
-                        <h3 class="property-title">To: <%= booking["date_to"] %></h3>
-                        <h3 class="property-title"><% if booking['approved'] != 't' %>Not <% end %>Approved</h3>
-                    <% end %>
-                    </ul>
+                            <div class="approval-dates">
+                                <h3 id="prop-spacing" class="property-title">Property: <%= booking["property_name"] %></h3>
+                                <h3 class="property-title">From: <%= booking["date_from"] %></h3>
+                                <h3 class="property-title">To: <%= booking["date_to"] %></h3>
+                                <h3 class="property-title"><% if booking['approved'] != 't' %>Not <% end %>Approved</h3>
+                            </div>
+                        <% end %>
+                    </div>
                 </div>
-
             </div>
         </div>
+
         <div class="properties-container">
         <h4 class="header"><u>YOUR PROPERTIES</u></h4>
             <% @properties.each do |property| %>

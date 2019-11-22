@@ -129,6 +129,7 @@ html {
     margin-top: 50px;
     flex-direction: column;
     border: 1px solid #ccc;
+    height: 100%;
 }
 
 .approvals-info {
