@@ -51,6 +51,7 @@ A practice group project based on Air BnB
 
 ## Folder structure, models and libraries
 
+```
 root
 |
 |----coverage
@@ -82,4 +83,4 @@ root
 
 **Once you signed up, choose the property you want to book and click Check Available Dates button**
 
-![alt tag](public/screenshots/book_property_page.png)
+![alt tag](public/screenshots/book_porperty_page.png)
