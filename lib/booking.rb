@@ -6,11 +6,12 @@ class Booking
     connection.exec_params("INSERT INTO booking (listing_id, guest_username, date_from, date_to) VALUES ($1, $2, $3, $4)",
                            [listing_id, guest_username, date_from, date_to])
   end
+ 
+    def self.get_booking_by_guest_username(username)
+        connection = Database.connect
+        booking = connection.exec_params("SELECT * FROM booking b INNER JOIN listings l ON b.listing_id = l.id WHERE guest_username=$1", [username]).to_a
+    end
 
-  def self.get_booking_by_guest_username(username)
-    connection = Database.connect
-    booking = connection.exec_params("SELECT * FROM booking WHERE guest_username=$1", [username]).to_a
-  end
 
   def self.approve_booking(guest_username, listing_id, approved)
     connection = Database.connect
