@@ -29,10 +29,10 @@
                 <div class="booking-image-container">
                     <img class="booking-image" src="<%= @property['image_link'] %>" alt="house">
                 </div>
-                <h3><%= @property["property-name"] %></h3>
+                <h3><%= @property["property_name"] %></h3>
                 <h4><%= @property["area"] %></h4>
                 <div class="property-details">
-                <h4><%= @property["home_type"] %></h4>
+                <h4>Type: <%= @property["home_type"] %></h4>
                     <div class="property-listing">
                         <ul class="property-details-list">
                             <% if @property["wifi"] == 't' %><li>Wifi</li><% end %>
@@ -58,11 +58,11 @@
                     <div class="break"></div>
                     <div class="book-dates">
                         <label for="start">Start date:</label>
-                        <input type="date" id="start" name="trip-start" min="<%= @property['date_from'] %>" max="<%= @property['date_to'] %>">
+                        <input type="date" id="start" name="trip-start" value="<%= @property['date_from'] %>" min="<%= @property['date_from'] %>" max="<%= @property['date_to'] %>">
                     </div>
                     <div class="book-dates">
                         <label for="end">End date:</label>
-                        <input type="date" id="end" name="trip-end" min="<%= @property['date_from'] %>" max="<%= @property['date_to'] %>">
+                        <input type="date" id="end" name="trip-end" value="<%= @property['date_from'] %>" min="<%= @property['date_from'] %>" max="<%= @property['date_to'] %>">
                     </div>
                     <select class="guests-select" name="guests-select" id="guests-select">
                         <option value="one">1 guest</option>
