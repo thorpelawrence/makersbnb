@@ -25,30 +25,46 @@
         </ul>
     </div>
     <div class="container">
-    <div class="approvals-container">
-    <% @bookings.each do |booking| %>
-    <div class="container-item">
-        <div class="property-container">
-            <div class="property-info">
-                <h3 class="property-title"><%= booking["date_from"] %></h3>
-                <h3 class="property-title"><%= booking["date_to"] %></h3>
-            </div>
-        </div>
-    </div>
-    <% end %>
-</div>
         <div class="heading-container">
             <h2 class="header">Hi <%= @username %>! Welcome to your profile!</h2>
-            <h4 class="header"><u>YOUR PROPERTIES</u></h4>
             <a href="/add-space" class="property-button">Add new property</a>
-            <h4 class="header">Your Bookings</h4>
-            <ul class="property-list">
-                <% @user_bookings.each do |booking| %>
-                    <li><%= booking['property_name'] %>: <%= booking['date_from'] %> to <%= booking['date_to'] %> - <% if booking['approved'] != 't' %>not yet <% end %>approved</li>
-                <% end %>
-            </ul>
+            
+            <div class="approvals-container">
+                <%# <h4 class="header">Awaiting Approval</h4> %>
+                
+                <div class="approvals-item">
+                    <div class="approvals-info">
+                        <h3>Awaiting approval </h3>
+                        <% @bookings.each do |booking| %>
+                        <div class="approval-dates">
+                            <h3 id="prop-spacing" class="property-title">Property: <%= booking["property_name"] %></h3>
+                            <h3 id="prop-spacing" class="property-title">Guest: <%= booking["guest_username"] %></h3>
+                            <h3 class="property-title">From: <%= booking["date_from"] %></h3>
+                            <h3 class="property-title">To: <%= booking["date_to"] %></h3>
+                            <a class="approve-button" href="/approve?approve=true&property=<%= booking['listing_id'] %>&guest=<%= booking['guest_username'] %>">Approve</a>
+                            <a class="decline-button" href="/approve?approve=false&property=<%= booking['listing_id'] %>&guest=<%= booking['guest_username'] %>">Decline</a>
+                        </div>
+                        <% end %>
+                    </div>
+                </div>
+
+                <%# <h4 class="header">Your Bookings</h4> %>
+                <div class="approvals-item">
+                    <h3>Your bookings</h3>
+                    <ul class="approval-dates">
+                        <% @user_bookings.each do |booking| %>
+                        <h3 class="property-title">Property: <%= booking["property_name"] %></h3>
+                        <h3 class="property-title">From: <%= booking["date_from"] %></h3>
+                        <h3 class="property-title">To: <%= booking["date_to"] %></h3>
+                        <h3 class="property-title"><% if booking['approved'] != 't' %>Not <% end %>Approved</h3>
+                    <% end %>
+                    </ul>
+                </div>
+
+            </div>
         </div>
         <div class="properties-container">
+        <h4 class="header"><u>YOUR PROPERTIES</u></h4>
             <% @properties.each do |property| %>
             <div class="container-item">
                 <div class="property-image">

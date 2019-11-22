@@ -94,4 +94,9 @@ class MakersBNB < Sinatra::Base
     Booking.create(params[:'property-id'], session[:username], params[:'trip-start'], params[:'trip-end'])
     redirect "/profile"
   end
+
+  get "/approve" do
+    Booking.approve_booking(params[:guest], params[:property], params[:approve] == "true")
+    redirect "/profile"
+  end
 end
