@@ -56,6 +56,7 @@ class MakersBNB < Sinatra::Base
     end
     @properties = Property.all_for_username(@username)
     @user_bookings = Booking.get_booking_by_guest_username(@username)
+    @bookings = Booking.all_for_username(@username)
     erb(:profile)
   end
 
