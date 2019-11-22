@@ -14,7 +14,7 @@ class User
     connection = Database.connect
     user = connection.exec_params("SELECT * FROM users WHERE username=$1", [username]).first
     connection.close
-    result
+    user
   end
 
   def self.check_password(username, password)
